@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Willdabeast" %></title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="fixed">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="/">Willdabeast</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Left Nav Section -->
+          <ul class="right">
+            <li class="has-dropdown">
+              <a href="/modelings">Modeling</a>
+              <ul class="dropdown">
+                <li><a href="/modelings">Shoots</a></li>
+              </ul>
+            </li>
+            <li class="divider"></li>
+            <li class="has-dropdown">
+              <a href="#">Dance</a>
+              <ul class="dropdown">
+                <li><a href="#">First link in dropdown</a></li>
+              </ul>
+            </li>
+            <li class="divider"></li>
+            <li class="has-dropdown">
+              <a href="#">Photography</a>
+              <ul class="dropdown">
+                <li><a href="#">First link in dropdown</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="right">
+            <% if current_admin %>
+            <li class="has-form">
+              <%= link_to "Create", new_modeling_path, :method => :get %>
+            </li>
+            <li class="divider"></li>
+            <li class="has-form">
+              <%= link_to "Sign Out", destroy_admin_session_path, :method => :delete %>
+            </li>
+            <li class="divider"></li>
+            <% end %>
+          </ul>
+          <!-- Left Nav Section -->
+          <!-- <ul class="right">
+            <li>
+              <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-envelope fa-2x"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-youtube-square fa-2x"></i></i></a>
+            </li>
+          </ul> -->
+        </section>
+      </nav>
+    </div>
+    <%= yield %>
+    <div class="bot-nav">
+      <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+      <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+      <a href="#"><i class="fa fa-envelope fa-2x"></i></a>
+      <a href="#"><i class="fa fa-youtube-square fa-2x"></i></i></a>
+    </div>
+    <!-- <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> -->
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>
+
