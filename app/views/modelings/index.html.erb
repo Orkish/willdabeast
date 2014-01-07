@@ -1,12 +1,12 @@
-<ul class="large-block-grid-4" id="img-model">
-  <% @modelings.each do |modeling| %>
-    <% if current_admin %>
-      <%= button_to "delete", modeling, :method => :delete %>
-    <% end %>
-    <li>
-      <img src="<%= modeling.image %>" alt="">
-      <h4><%= modeling.description %></h4>
-    </li>
-    
-  <% end %>
-</ul>
+<div id="carousel">
+  <img src="assets/model1.jpg" alt="building1" width="990" height="450" />
+  <img src="assets/model2.jpg" alt="building2" width="990" height="450" />
+  <img src="assets/model3.jpg" alt="building3" width="990" height="450" />
+  <img src="assets/model4.jpg" alt="building4" width="990" height="450" />
+  <img src="assets/model5.jpg" alt="building5" width="990" height="450" />
+  <img src="assets/model6.jpg" alt="building6" width="990" height="450" />
+</div>
+<a href="#" id="prev" title="Show previous"> </a>
+<a href="#" id="next" title="Show next"> </a>
+<div id="pager"></div>
+</div>
