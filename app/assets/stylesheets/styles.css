@@ -17,6 +17,7 @@ html body {
 #about {
   background-color: rgba(44, 62, 80,.3);
   display: none;
+  color: white;
   width: 80%;
   text-align: center;
   margin: 0 auto;
