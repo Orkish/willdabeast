@@ -41,7 +41,26 @@ a, a:visited, a:hover, a:active {
 
 #img-model {
   margin: 0;
+  padding: 0;
+  position: relative;
 }
+
+.desc {
+  background-color:rgba(52, 152, 219,.7);
+  opacity: 0;
+  position: absolute;
+  z-index: 10
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#img-model:hover .desc {
+  opacity: 1;
+}
+
 
 
 
