@@ -3,7 +3,7 @@
     <% if current_admin %>
       <%= button_to "delete", modeling, :method => :delete %>
     <% end %>
-  <li>
+  <li id="pics">
     <%= image_tag modeling.image_url %>
     <h4 class="desc"><%= modeling.description %></h4>
     <% end %>
