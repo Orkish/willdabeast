@@ -4,6 +4,7 @@ devise_for :admins
 
 root :to => "home#index"
 resources :modelings
+resources :contents
 
 end
 
