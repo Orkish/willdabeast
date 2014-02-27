@@ -4,4 +4,8 @@ $(function() {
   $("#about").delay(7000).fadeIn();
 });
 
-/////// Carousel //////
+/////// fancybox //////
+
+$(document).ready(function() {
+  $(".fancybox").fancybox();
+});

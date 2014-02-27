@@ -1,11 +1,29 @@
-<ul class="large-block-grid-1" id="img-model">
-  <% @modelings.each do |modeling| %>
-    <% if current_admin %>
-      <%= button_to "delete", modeling, :method => :delete %>
+<article>
+  <div class="row small-11 small-centered columns">
+    <% @modelings.each do |modeling| %>
+      <a class="fancybox">
+        <div class="small-11 small-centered columns banner" id="banner1">
+          <div  rel="group" href="<%= modeling.image %>"></div>
+          <h1>EXPRESSIONS</h1>
+        </div>
+      </a>
     <% end %>
-  <li id="pics">
-    <%= image_tag modeling.image_url %>
-    <h4 class="desc"><%= modeling.description %></h4>
-    <% end %>
-  </li>
-</ul>
+  </div>
+</article>
+
+<div class="row small-11 small-centered columns">
+  <div class="small-11 small-centered columns banner" id="banner2"><h1>GENTLEMAN Q</h1></div>
+</div>
+<div class="row small-11 small-centered columns">
+  <div class="small-11 small-centered columns banner" id="banner3"><h1>MODEL WORKS</h1></div>
+</div>
+<div class="row small-11 small-centered columns">
+  <div class="small-11 small-centered columns banner" id="banner4"><h1>PERSONAL WORK</h1></div>
+</div>
+<!-- <a class="fancybox" rel="group" href="big_image_2.jpg"><img src="assets/model2.jpg" alt="" /></a> -->
+
+<div class="heightest">yeah</div>
+
+<a class="fancybox" rel="gallery1" href="http://farm6.staticflickr.com/5471/9036958611_fa1bb7f827_b.jpg" title="Westfield Waterfalls - Middletown CT Lower (Graham_CS)">
+  <img src="http://farm6.staticflickr.com/5471/9036958611_fa1bb7f827_m.jpg" alt="" />
+</a>

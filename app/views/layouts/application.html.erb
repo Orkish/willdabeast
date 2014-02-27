@@ -6,6 +6,17 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "Willdabeast" %></title>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="assets/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="assets/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="assets/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script type="text/javascript" src="assets/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="assets/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="assets/jquery.fancybox-media.js?v=1.0.6"></script>
+    <script type="text/javascript" src="assets/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+    
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
@@ -38,11 +49,8 @@
               </ul>
             </li>
             <li class="divider"></li>
-            <li class="has-dropdown">
-              <a href="#">Photography</a>
-              <ul class="dropdown">
-                <li><a href="#">First link in dropdown</a></li>
-              </ul>
+            <li>
+              <a href="/about">About Me</a>
             </li>
             <li>
               <a href="#"><i class="fa fa-facebook-square"></i></a>
