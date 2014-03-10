@@ -1,8 +1,9 @@
 <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
   <% for modeling in @modelings %>
     <li>
-      <a class="fancybox" rel="gallery1" href="<%= modeling.image %>" title="<%= modeling.description %>">
-        <%= image_tag modeling.image_url(:thumb) if modeling.image? %>
+      <a class="fancybox-thumb" rel="fancybox-thumb" href="<%= modeling.image %>" title="<%= modeling.description %>">
+        <img src="<%= modeling.image %>" alt="">
+        
       </a>
     </li>
   <% end %>

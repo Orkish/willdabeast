@@ -16,10 +16,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  # image = MiniMagick::Image.open("/assets/images/model1.jpg")
-  # image.resize "100x100"
-  # image.write  "model1.jpg"
-
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
   #   # For Rails 3.1+ asset pipeline compatibility:
@@ -29,7 +25,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # end
 
   # Process files as they are uploaded:
-  # process :scale => [50, 50]
+  process :scale => [150, 150]
   #
   # def scale(width, height)
   #   # do something
@@ -37,7 +33,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process :resize_to_limit => [50, 50]
+    process :resize_to_limit => [150, 150]
   end
 
 
